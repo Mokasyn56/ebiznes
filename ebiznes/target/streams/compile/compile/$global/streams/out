@@ -1,0 +1,6 @@
+[error] C:\Users\huber\ebiznes\conf\routes:14:1: Cannot use a method returning Unit as a Handler for requests
+[error] GET     /addOrder                   controllers.FacebookOAuthController.addOrder
+[error] C:\Users\huber\ebiznes\conf\routes:14:1: not enough arguments for method createInvoker: (implicit hif: play.core.routing.HandlerInvokerFactory[Unit])play.core.routing.HandlerInvoker[Unit].
+[error] Unspecified value parameter hif.
+[error] GET     /addOrder                   controllers.FacebookOAuthController.addOrder
+[error] two errors found
