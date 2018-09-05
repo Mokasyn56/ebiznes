@@ -1,0 +1,23 @@
+
+<hr color="red" size="50"/>
+<p>
+  Tak wygląda twoje zamowienie.
+</p>
+<table>
+    <tr>
+      <th>Produkty</th>
+      <th>Łączna cena</th>
+    </tr>
+    <tr>
+      <td>{{getOrder.products}}</td>
+      <td>{{getOrder.price}} zł</td>
+    </tr>
+</table>
+
+<form action="/basket">
+  <input type="submit" value="Wroc do koszyka" />
+</form>
+
+<form action="http://localhost:9090/addOrder ">
+  <input type="submit" value="Zrealizuj zamowienie" />
+</form>

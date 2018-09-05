@@ -1,0 +1,30 @@
+<ul>
+    <li><a class="active" href="/shop">Strona Głowna</a></li>
+    <li><a href="/products">Produkty</a></li>
+    <li><a href="/basket">Koszyk</a></li>
+    <li><a href="http://localhost:9090/logout/facebook">Wyloguj</a></li>
+  </ul>
+
+  <table>
+      <tr>
+        <th>Nazwa produktu</th>
+        <th>Ilość</th>
+        <th>Łączna cena</th>
+      </tr>
+      <tr *ngFor="let i of getBasketProducts">
+        <td>{{i.name}}</td>
+        <td>{{i.count}}</td>
+        <td>{{i.price}} zł</td>
+      </tr>
+      <tr>
+        <td>Łączna cena zamowienia: {{getTotal()}} zł</td>
+      </tr>
+  </table>
+ <br>
+<form action="http://localhost:9090/cleanBacket">
+    <input type="submit" value="Wyczysc koszyk" />
+</form>
+<br>
+<form action="/order">
+  <input type="submit" value="Przejdz do zamowienia" />
+</form>

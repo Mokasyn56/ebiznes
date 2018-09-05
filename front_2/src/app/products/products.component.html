@@ -1,0 +1,23 @@
+<ul>
+    <li><a class="active" href="/shop">Strona Głowna</a></li>
+    <li><a href="/products">Produkty</a></li>
+    <li><a href="/basket">Koszyk</a></li>
+    <li><a href="http://localhost:9090/logout/facebook">Wyloguj</a></li>
+  </ul>
+
+  <table>
+      <tr>
+        <th>Nazwa produktu</th>
+        <th>Opis produktu</th>
+        <th>Cena</th>
+        <th>Kategoria</th>
+        <th>Dodaj do koszyka</th>
+      </tr>
+      <tr *ngFor="let i of getProducts">
+        <td>{{i.name}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.price}} zł</td>
+        <td>{{i.category}}</td>
+        <td><button (click)="AddItem(i.id)">Dodaj</button></td>
+      </tr>
+    </table>
